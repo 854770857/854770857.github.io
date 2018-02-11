@@ -14,9 +14,10 @@
         <script type="text/javascript" src="./renxi/jscex-async-powerpack.min.js"></script>
         <script type="text/javascript" src="./renxi/functions.js" charset="utf-8"></script>
         <script type="text/javascript" src="./renxi/love.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     </head>
     <body>
-			<audio autoplay="autopaly">
+			<audio autoplay="autopaly" id="shakingAudio">
 					<source src="renxi.mp3" type="audio/mp3" />
 			</audio>  
         <div id="main">
@@ -99,6 +100,7 @@
         var hold = 1;
 
         canvas.click(function(e) {
+            $('#shakingAudio')[0].play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
