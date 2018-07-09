@@ -78,7 +78,7 @@ function loadApp() {
 				case 1:
 					timer = setInterval(() => {
 						$('.magazine').turn('next');
-					}, 100)
+					}, 10)
 					break;
 				case 2:
 					clearInterval(timer);
@@ -108,7 +108,7 @@ function loadApp() {
 	flipbook.turn({			
 			width: 1200,
   			height: 781,
-			duration: 50,   //翻页速度，值越小越快
+			duration: 10,   //翻页速度，值越小越快
 			acceleration: !isChrome(),
 			gradients: true,			
 			autoCenter: true,
