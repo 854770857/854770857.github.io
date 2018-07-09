@@ -51,10 +51,9 @@ function addPage(page, book) {
 
     // Add the page to the flipbook
     if (book.turn('addPage', element, page)) {
-
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
-        element.html(`<div class="gradient">${page}</div>`);
+        element.html(`<div class="gradient"></div>`);
         // Load the page
         loadPage(page, element);
     }
@@ -65,7 +64,6 @@ function loadPage(page, pageElement) {
     $.ajax({ url: 'pages/page' + page + '.html'}).
     done(function (pageHtml) {
         pageElement.append(pageHtml)
-        // $('.magazine .p' + page).html(`<div class="gradient">${pageHtml}</div>`);
     });
 }
 
