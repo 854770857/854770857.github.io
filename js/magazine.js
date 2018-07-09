@@ -43,7 +43,10 @@ function setArrows() {
 
 
 function addPage(page, book) {
-
+    if (page == 1) {
+        console.log(111)
+        return
+    }
     var id, pages = book.turn('pages');
 
     // Create a new element for this page
@@ -55,7 +58,6 @@ function addPage(page, book) {
         // It will contain a loader indicator and a gradient
         element.html(`<div class="gradient"></div>`);
         // Load the page
-        if (page == 1) return
         loadPage(page, element);
     }
 
