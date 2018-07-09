@@ -54,9 +54,9 @@ function addPage(page, book) {
 
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
-        element.html(`<div class="gradient">${page}</div>`);
+        // element.html(`<div class="gradient">${page}</div>`);
         // Load the page
-        // loadPage(page, element);
+        loadPage(page, element);
     }
 
 }
