@@ -78,8 +78,7 @@ function loadApp() {
 				case 1:
 					timer = setInterval(() => {
 						$('.magazine').turn('next');
-						console.log(1)
-					}, 100)
+					}, 50)
 					break;
 				case 2:
 					clearInterval(timer);
@@ -90,7 +89,6 @@ function loadApp() {
 					break;
 			}
 		}
-		console.log(flag, 'flag')
 	});
 
  	$('#canvas').fadeIn(1000);
@@ -110,20 +108,22 @@ function loadApp() {
 	flipbook.turn({			
 			width: 1200,
   			height: 781,
-			duration: 50,   //翻页速度，值越小越快
+			duration: 10,   //翻页速度，值越小越快
 			acceleration: !isChrome(),
 			gradients: true,			
 			autoCenter: true,
 			elevation: 50,
-			pages: 100,
+			pages: 300,
 			when: {
-				turning: function(event, page, view) {					
+				turning: function(event, page, view) {
+					console.log(page, 'turning')			
 					var book = $(this),
 					currentPage = book.turn('page'),
 					pages = book.turn('pages');			
 					Hash.go('page/' + page).update();
 				},
 				turned: function(event, page, view) {
+					console.log(page, 'turned')
 					$(this).turn('center');
 					pages = $(this).turn('pages');
 					if (page==1) {
@@ -135,6 +135,7 @@ function loadApp() {
 					}
 				},
 				missing: function (event, pages) {
+					console.log(pages, 'missing')
 					for (var i = 0; i < pages.length; i++)
 						addPage(pages[i], $(this));
 				}
