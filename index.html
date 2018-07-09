@@ -108,12 +108,12 @@ function loadApp() {
 	flipbook.turn({			
 			width: 1200,
   			height: 781,
-			duration: 10,   //翻页速度，值越小越快
+			duration: 5,   //翻页速度，值越小越快
 			acceleration: !isChrome(),
 			gradients: true,			
 			autoCenter: true,
 			elevation: 50,
-			pages: 301,
+			pages: 300,
 			when: {
 				turning: function(event, page, view) {
 					var book = $(this),
