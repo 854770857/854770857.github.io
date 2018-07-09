@@ -64,7 +64,7 @@ function addPage(page, book) {
 function loadPage(page, pageElement) {
     $.ajax({ url: 'pages/page' + page + '.html'}).
     done(function (pageHtml) {
-        $('.magazine .p' + page).html(pageHtml);
+        $('.magazine .p' + page).html(`<div class="gradient">${pageHtml}</div>`);
     });
 }
 
