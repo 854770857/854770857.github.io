@@ -68,6 +68,16 @@
 	-o-box-shadow: 0 0 20px rgba(0,0,0,0.2);
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+.magazine .page-number{
+	color:#999;
+	width:100%;
+	bottom:25px;
+	position:absolute;
+	display:block;
+	text-align: center;
+	line-height:30px;
+	font-size:30px;
+}
 .magazine .p1{
 	background-image:url(../pics/books.jpg) !important;
 }
