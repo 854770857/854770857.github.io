@@ -43,17 +43,13 @@ function setArrows() {
 
 
 function addPage(page, book) {
-    if (page == 1) {
-        console.log(111)
-        return
-    }
     var id, pages = book.turn('pages');
 
     // Create a new element for this page
     var element = $('<div />', {});
 
     // Add the page to the flipbook
-    if (book.turn('addPage', element, page)) {
+    if (book.turn('addPage', element, page) && page > 1) {
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
         element.html(`<div class="gradient"></div>`);
