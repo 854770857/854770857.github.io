@@ -54,7 +54,7 @@ function addPage(page, book) {
 
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
-        // element.html(`<div class="gradient">${page}</div>`);
+        element.html(`<div class="gradient">${page}</div>`);
         // Load the page
         loadPage(page, element);
     }
@@ -64,7 +64,8 @@ function addPage(page, book) {
 function loadPage(page, pageElement) {
     $.ajax({ url: 'pages/page' + page + '.html'}).
     done(function (pageHtml) {
-        $('.magazine .p' + page).html(`<div class="gradient">${pageHtml}</div>`);
+        pageElement.append(pageHtml)
+        // $('.magazine .p' + page).html(`<div class="gradient">${pageHtml}</div>`);
     });
 }
 
