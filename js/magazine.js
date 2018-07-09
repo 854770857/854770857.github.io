@@ -63,7 +63,7 @@ function addPage(page, book) {
 function loadPage(page, pageElement) {
     $.ajax({ url: 'pages/page' + page + '.html'}).
     done(function (pageHtml) {
-        pageElement.append(pageHtml)
+        pageElement.append(`${pageHtml}<span class="page-number">${page}</span>`)
     });
 }
 
