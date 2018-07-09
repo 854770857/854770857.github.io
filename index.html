@@ -78,7 +78,7 @@ function loadApp() {
 				case 1:
 					timer = setInterval(() => {
 						$('.magazine').turn('next');
-					}, 100)
+					}, 50)
 					break;
 				case 2:
 					clearInterval(timer);
@@ -113,7 +113,7 @@ function loadApp() {
 			gradients: true,			
 			autoCenter: true,
 			elevation: 50,
-			pages: 100,
+			pages: 300,
 			when: {
 				turning: function(event, page, view) {
 					var book = $(this),
