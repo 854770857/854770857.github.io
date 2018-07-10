@@ -69,7 +69,6 @@
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .magazine .page-number{
-	color:#999;
 	width:100%;
 	bottom:25px;
 	position:absolute;
@@ -99,7 +98,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 4vw;
+}
+.gradient p {
+	text-align: inherit;
 	font-size: 30px;
+	color:#999;
+	line-height: 30px;
 }
 .magazine .even .gradient {
 	background: -webkit-gradient(linear, left top, right top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, rgba(0,0,0,0.2)));
