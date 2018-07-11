@@ -103,8 +103,8 @@
 	text-align: inherit;
 	font-size: 1.5vw;
 	color:#6d6d6d;
-	line-height: 3vw;
-	padding: 0 7vw;
+	line-height: 2;
+	padding: 0 10%;
 }
 .magazine .even .gradient {
 	background: -webkit-gradient(linear, left top, right top, color-stop(0.95, rgba(0,0,0,0)), color-stop(1, rgba(0,0,0,0.2)));
